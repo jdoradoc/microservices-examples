@@ -14,6 +14,6 @@ public interface IGameService {
 
     @GetMapping
     @ResponseBody
-    public List<GameDto> fetch();
+    List<GameDto> fetch();
 
 }

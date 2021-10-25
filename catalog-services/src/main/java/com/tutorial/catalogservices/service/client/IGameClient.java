@@ -1,18 +1,17 @@
 package com.tutorial.catalogservices.service.client;
 
-import com.tutorial.catalogservices.dto.CategoryDto;
+import com.tutorial.catalogservices.dto.GameDto;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
 
-@FeignClient(name = "categories-service")
-@RequestMapping("categories")
-public interface ICategoryService {
+@FeignClient(name = "games-service")
+public interface IGameClient {
 
-    @GetMapping
+    @GetMapping("games")
     @ResponseBody
-    List<CategoryDto> fetch();
+    List<GameDto> fetch();
+
 }

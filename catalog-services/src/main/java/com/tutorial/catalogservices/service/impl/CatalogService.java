@@ -4,15 +4,14 @@ import com.tutorial.catalogservices.dto.CatalogDto;
 import com.tutorial.catalogservices.dto.CategoryDto;
 import com.tutorial.catalogservices.dto.GameDto;
 import com.tutorial.catalogservices.service.ICatalogService;
-import com.tutorial.catalogservices.service.client.ICategoryService;
-import com.tutorial.catalogservices.service.client.IGameService;
+import com.tutorial.catalogservices.service.ICategoryService;
+import com.tutorial.catalogservices.service.IGameService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 public class CatalogService implements ICatalogService {
-
 
     private final IGameService gameService;
 

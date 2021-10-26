@@ -3,6 +3,24 @@ server:
 spring:
   application:
     name: "gateway-service"
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: catalog-service
+          uri: lb://catalog-service
+          predicates:
+            - Path=/catalog/**
+        - id: category-service
+          uri: lb://category-service
+          predicates:
+            - Path=/category/**
+        - id: games-service
+          uri: lb://games-service
+          predicates:
+            - Path=/games/**
 eureka:
   client:
     serviceUrl:

@@ -13,10 +13,10 @@ spring:
           uri: lb://catalog-service
           predicates:
             - Path=/catalog/**
-        - id: category-service
-          uri: lb://category-service
+        - id: categories-service
+          uri: lb://categories-service
           predicates:
-            - Path=/category/**
+            - Path=/categories/**
         - id: games-service
           uri: lb://games-service
           predicates:
